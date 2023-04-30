@@ -1,0 +1,41 @@
+﻿@using System.Security.Claims
+@using Microsoft.AspNetCore.Authorization
+@using Microsoft.AspNetCore.Components
+@using Microsoft.AspNetCore.Components.Authorization
+@using Microsoft.AspNetCore.Components.Forms
+@using Microsoft.AspNetCore.Components.Routing
+@using Microsoft.AspNetCore.Components.Web
+@using Microsoft.AspNetCore.Components.Web.Virtualization
+@using Microsoft.AspNetCore.Components.WebAssembly.Authentication
+@using Microsoft.AspNetCore.Components.WebAssembly.Http
+@using Microsoft.Extensions.Configuration
+@using Microsoft.Extensions.DependencyInjection
+@using Microsoft.Extensions.Localization
+@using Microsoft.JSInterop
+@using ScreenDrafts.Web.Client
+@using ScreenDrafts.Web.Client.Shared
+@using ScreenDrafts.Web.Client.Pages.Authentication
+@using ScreenDrafts.Web.Client.Pages.Multitenancy
+@using ScreenDrafts.Web.Client.Components.Common
+@using ScreenDrafts.Web.Client.Components.EntityTable
+@using ScreenDrafts.Web.Client.Components.Localization
+@using ScreenDrafts.Web.Client.Components.Notifications
+@using ScreenDrafts.Web.Client.Components.ThemeManager
+@using ScreenDrafts.Web.Client.Infrastructure.ApiClient
+@using ScreenDrafts.Web.Client.Infrastructure.Auth
+@using ScreenDrafts.Web.Client.Infrastructure.Common
+@using ScreenDrafts.Web.Client.Infrastructure.Notifications
+@using ScreenDrafts.Web.Client.Infrastructure.Preferences
+@using FSH.WebApi.Shared.Authorization
+@using Blazored.LocalStorage
+@using Mapster
+@using MediatR.Courier
+@using MudBlazor
+
+@attribute [Authorize]
+
+@inject NavigationManager Navigation
+@inject ISnackbar Snackbar
+@inject IDialogService DialogService
+@inject IConfiguration Config
+@inject IClientPreferenceManager ClientPreferences
